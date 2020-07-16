@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fa0054</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorAccent">#fa0054</color>
+    <color name="colorWhiteBackground">#ffffff</color>
+    <color name="colorBlueText">#00d1fa</color>
+    <color name="colorText">#5a5a5a</color>
+    <color name="primary_material_dark">#ffffff</color>
+    <color name="colorTextTitleBackground">#d8d8d8</color>
+    <color name="background_material_light">#fafafa</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlueButton">#00ccff</color>
+    <color name="colorRedButton">#ff0066</color>
+
+    <color name="Caramello">#ecc6a2</color>
+    <color name="Glasse">#844a34</color>
+    <color name="Cappuccino">#5c423a</color>
+    <color name="Barolo">#622722</color>
+    <color name="Nero">#000000</color>
+    <color name="Fumo">#798083</color>
+    <color name="Pietra">#8d8f8e</color>
+    <color name="Sigaro">#94846a</color>
+    <color name="ViolaGrey">#9d92b4</color>
+    <color name="PoisMandoria">#f1c1a1</color>
+</resources>

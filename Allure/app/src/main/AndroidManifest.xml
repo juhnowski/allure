@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="ru.allurecalze.allure">
+
+    <uses-feature
+            android:name="android.hardware.camera"
+            android:required="true"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true">
+        <activity
+                android:name="ru.allurecalze.allure.Login"
+                android:label="@string/app_name"
+                android:theme="@style/AppTheme.Launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.Allure"
+                android:label="@string/title_activity_main"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.AccountSettings"
+                android:label="@string/title_account_settings"
+                android:parentActivityName="ru.allurecalze.allure.Allure">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.Allure"/>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.ChangeAvatar"
+                android:label="@string/title_activity_change_avatar"
+                android:parentActivityName="ru.allurecalze.allure.AccountSettings">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.AccountSettings"/>
+        </activity>
+
+        <provider
+                android:name="android.support.v4.content.FileProvider"
+                android:authorities="ru.allurecalze.allure.fileprovider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/file_paths"/>
+        </provider>
+
+        <activity
+                android:name="ru.allurecalze.allure.ChangePassword"
+                android:parentActivityName="ru.allurecalze.allure.AccountSettings">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.AccountSettings"/>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.InstagrammAccount"
+                android:parentActivityName="ru.allurecalze.allure.AccountSettings">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.AccountSettings"/>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.ChangeAccount"
+                android:parentActivityName="ru.allurecalze.allure.AccountSettings">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.AccountSettings"/>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.MyChat"
+                android:label="@string/title_activity_my_chat"
+                android:parentActivityName="ru.allurecalze.allure.Allure">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.Allure"/>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.MessageListActivity"
+                android:label="@string/title_activity_my_chat"
+                android:parentActivityName="ru.allurecalze.allure.MyChat">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.Allure"/>
+        </activity>
+        <activity android:name="ru.allurecalze.allure.ItemMessageReceived">
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.Subscription"
+                android:label="Подписка"
+                android:parentActivityName="ru.allurecalze.allure.Allure">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.Allure"/>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.PrivacyPolicy"
+                android:label="Политика конфиденциальности"
+                android:parentActivityName="ru.allurecalze.allure.Subscription">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.Subscription"/>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.PublicOffert"
+                android:label="Пeубличная оферта"
+                android:parentActivityName="ru.allurecalze.allure.Subscription">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.Subscription"/>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.Registration"
+                android:parentActivityName="ru.allurecalze.allure.Login"
+                android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.Login"/>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.InstagramResult"
+                android:label="Подтвердить аккаунт"
+                android:parentActivityName="ru.allurecalze.allure.Allure">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.Allure"/>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.SearchOptions"
+                android:label="Search Options"
+                android:parentActivityName="ru.allurecalze.allure.Allure">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.Allure"/>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.RaceActivity"
+                android:label="Гонка приглашений"
+                android:parentActivityName="ru.allurecalze.allure.Allure">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.Allure"/>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.Promo"
+                android:label="Гонка приглашений - Правила"
+                android:parentActivityName="ru.allurecalze.allure.RaceActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.RaceActivity"/>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.CategoriesList"
+                android:label="Категории"
+                android:parentActivityName="ru.allurecalze.allure.SearchOptions">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.SearchOptions"/>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.KeywordsList"
+                android:label="Ключевые слова"
+                android:parentActivityName="ru.allurecalze.allure.SearchOptions">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.SearchOptions"/>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.LanguigeList"
+                android:label="Язык"
+                android:parentActivityName="ru.allurecalze.allure.SearchOptions">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.SearchOptions"/>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.PaymentList"
+                android:label="Способ оплаты"
+                android:parentActivityName="ru.allurecalze.allure.SearchOptions">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.SearchOptions"/>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.OrdersList"
+                android:label="Сортировка"
+                android:parentActivityName="ru.allurecalze.allure.SearchOptions">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.SearchOptions"/>
+        </activity>
+        <activity
+                android:name="ru.allurecalze.allure.AdvertView"
+                android:label="Просмотр"
+                android:parentActivityName="ru.allurecalze.allure.Allure">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.Allure"/>
+        </activity>
+        <activity android:name="ru.allurecalze.allure.AdvertNew"
+                  android:label="Новое объявление"
+                  android:parentActivityName="ru.allurecalze.allure.Allure"
+                  android:windowSoftInputMode="stateVisible|adjustPan|adjustResize">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="ru.allurecalze.allure.Allure"/>
+        </activity>
+    </application>
+
+</manifest>
